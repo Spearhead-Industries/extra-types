@@ -15,7 +15,7 @@ type ResultUnknown<T, E> = {
 
 type ResultOk<T, E> = {
     ok: true,
-    value: T|E,
+    value: T,
     is_ok: ()->true,
     ok_or_nil: ()->T,
     ok_or: <A>(alt: A)->T,
@@ -26,7 +26,7 @@ type ResultOk<T, E> = {
 
 type ResultErr<T, E> = {
     ok: false,
-    value: T|E,
+    value: E,
     is_ok: ()->false,
     ok_or_nil: ()->nil,
     ok_or: <A>(alt: A)->A,
