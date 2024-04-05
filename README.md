@@ -15,7 +15,7 @@ local et = require("@lpm/extra-types");
 
 local function func_that_can_fail(): et.Result<number, string>
     if math.random() > 0.5 then
-        return et.Result.Ok(true);
+        return et.Result.Ok(5);
     else
         return et..Result.Err("It failed brah");
     end
